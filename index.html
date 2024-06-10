@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de compra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .table-container {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        .additional-info {
+            width: 48%;
+            border-bottom: 1px solid #ddd;
+            margin-left: 50px;
+        }
+        .titulo h1 {
+            text-align: center;
+            margin-top:5%;
+            padding-right: 500px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        .table th {
+            border-bottom: 2px solid #ddd;
+        }
+        .table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        .table tbody tr:last-child {
+            border-bottom: 2px solid #ddd;
+        }
+        .product-image img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+        .product-name a {
+            text-decoration: none;
+            color: #888;
+            display: block;
+            overflow: hidden;
+            font-size: 14px; 
+        }
+
+        .product-name span {
+            font-size: 12px;
+            color: #888;
+            display: block;
+            overflow: hidden;
+
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+
+        }
+        .quantity i {
+            cursor: pointer;
+            margin: 0 15px;
+            color: #888;;
+        }
+        .delete i {
+            cursor: pointer;
+            color: #888;
+            margin-left: 10px;
+        }
+        .product-row {
+            display: flex;
+            align-items: center;
+        }
+        .product-info {
+            flex-grow: 1;
+            padding-left: 40px;
+            
+        }
+
+        .product-price {
+            margin-left: 20px;
+        }
+
+        .additional-info {
+            padding: 30px;
+        }
+        
+        .btn {
+            margin-bottom: 10px;
+        }
+        .btn-outline-danger {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+    </style>
+</head>
+<div class="titulo">
+    <h1>Resumen de compra</h1>
+</div>
+<body>
+    <div class="container">
+        <table class="table cart-items">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="product-row">
+                            <div class="product-image">
+                                <img src="//nikeco.vteximg.com.br/arquivos/ids/515241-400-400/AURORA_DV1238-009_PHSLH000-1000.png?v=638441206287230000" alt="">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <a href="#">Zapatillas Nike Air Max 90</a>
+                                    <span> Talla:7 Calzado de caminata para mujer</span>  
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="product-price">
+                        <span>$ 294.950</span>  
+                    </td>
+                    <td class="quantity">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        <h3>1</h3>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </td>
+                    <td class="quantity-price">
+                        <span>$ 294.950</span>
+                    </td>
+                    <td class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product-row">
+                            <div class="product-image">
+                                <img src="https://nikeco.vteximg.com.br/arquivos/ids/202811-400-400/126020400049.jpg?v=638343796359300000" alt="">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <a href="#">Nike Court Vision Low Next Nature</a>
+                                    <span>DH2987-101 Talla:10 Calzado para hombre</span>  
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="product-price">
+                        <span>$ 409.950</span>  
+                    </td>
+                    <td class="quantity">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        <h3>1</h3>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </td>
+                    <td class="quantity-price">
+                        <span>$ 409.950</span>
+                    </td>
+                    <td class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product-row">
+                            <div class="product-image">
+                                <img src="//nikeco.vteximg.com.br/arquivos/ids/519288-400-400/FN2801_100_A.jpg?v=638442157091700000" alt="">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <a href="#">Nike One Classic FN2801-100 Talla:L</a>
+                                    <span> Camiseta de manga larga Dri-FIT para mujer</span>  
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="product-price">
+                        <span>$ 209.950</span>  
+                    </td>
+                    <td class="quantity">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        <h3>1</h3>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </td>
+                    <td class="quantity-price">
+                        <span>$ 209.950</span>
+                    </td>
+                    <td class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product-row">
+                            <div class="product-image">
+                                <img src="//nikeco.vteximg.com.br/arquivos/ids/201047-400-400/125950003263.jpg?v=638343789715400000" alt="">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <a href="#">Nike Sportswear Club Fleece DQ5800-010</a>
+                                    <span> Talla:M Pantalones de entrenamiento oversized de tiro medio</span>  
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="product-price">
+                        <span>$ 319.950</span>  
+                    </td>
+                    <td class="quantity">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        <h3>1</h3>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </td>
+                    <td class="quantity-price">
+                        <span>$ 319.950</span>
+                    </td>
+                    <td class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product-row">
+                            <div class="product-image">
+                                <img src="//nikeco.vteximg.com.br/arquivos/ids/554763-400-400/FJ4284_706_A_PREM.jpg?v=638475957676170000" alt="">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <a href="#">Brasil local 2024 Stadium FJ4284-706</a>
+                                    <span> Talla:M Camiseta de fútbol Nike Dri-FIT replica para hombre</span>  
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="product-price">
+                        <span>$ 524.950 </span>  
+                    </td>
+                    <td class="quantity">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        <h3>1</h3>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </td>
+                    <td class="quantity-price">
+                        <span>$ 524.950 </span>
+                    </td>
+                    <td class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="additional-info">
+            <p class="codigo">¿Tienes un código promocional?</p>
+            <p>Entrega</p>
+            <p>Vea todas las opciones de envío para sus productos, incluyendo los plazos y los precios de envío</p>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                   Calcular 
+                </label>
+              </div>              
+            <p>Subtotal: $1.759.750</p>
+            <p>Total: $1.759.750</p>
+            <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<label class="btn btn-outline-danger" for="danger-outlined">Ir al checkout</label>
+        </div>
+    </div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
